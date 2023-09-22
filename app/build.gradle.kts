@@ -47,8 +47,8 @@ dependencies {
     implementation("androidx.privacysandbox.tools:tools-core:1.0.0-alpha05")
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.1")
 
-    implementation("androidx.navigation:navigation-ui-ktx:2.7.1")
-    implementation("androidx.navigation:navigation-fragment-ktx:2.7.1")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.3")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.3")
 
 
     testImplementation("junit:junit:4.13.2")

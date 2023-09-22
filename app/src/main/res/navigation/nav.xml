@@ -2,47 +2,42 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/home"
-    android:id="@+id/nav">
-    <fragment android:id="@+id/home"
-        android:name="com.guido.mascotas_2.fragments.inicio"
-        tools:layout="@layout/fragment_inicio">
+    android:id="@+id/nav"
+    app:startDestination="@id/inicioFragment">
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="com.guido.mascotas_2.fragments.inicioFragment"
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio" >
         <action
-            android:id="@+id/action_home_to_registrar"
-            app:destination="@id/registrar" />
+            android:id="@+id/action_inicioFragment_to_registrarFragment"
+            app:destination="@id/registrarFragment" />
     </fragment>
-
-
-    <fragment android:id="@+id/registrar"
-        android:name="com.guido.mascotas_2.fragments.registrar"
-        tools:layout="@layout/fragment_registrar">
+    <fragment
+        android:id="@+id/registrarFragment"
+        android:name="com.guido.mascotas_2.fragments.registrarFragment"
+        android:label="fragment_registrar"
+        tools:layout="@layout/fragment_registrar" >
         <action
-            android:id="@+id/action_registrar_to_mascotas"
-            app:destination="@id/tipos_razas" />
+            android:id="@+id/action_registrarFragment_to_mascotasFragment"
+            app:destination="@id/mascotasFragment" />
     </fragment>
-
-    <fragment android:id="@+id/mascotas"
-        android:name="com.guido.mascotas_2.fragments.mascotas"
-        tools:layout="@layout/fragment_mascotas">
+    <fragment
+        android:id="@+id/mascotasFragment"
+        android:name="com.guido.mascotas_2.fragments.mascotasFragment"
+        android:label="fragment_mascotas"
+        tools:layout="@layout/fragment_mascotas" >
         <action
-            android:id="@+id/action_mascotas_to_home"
-            app:destination="@id/buscar" />
+            android:id="@+id/action_mascotasFragment_to_filtarFragment"
+            app:destination="@id/filtarFragment" />
     </fragment>
-<fragment android:id="@+id/buscar"
-    android:name="com.guido.mascotas_2.fragments.filtar"
-    tools:layout="@layout/fragment_filtar">
-    <action
-        android:id="@+id/action_buscar_to_mascotas"
-        app:destination="@id/home" />
-</fragment>
-    <fragment android:id="@+id/tipos_razas"
-        android:name="com.guido.mascotas_2.fragments.tipos_razas"
-        tools:layout="@layout/fragment_tipos_razas">
+    <fragment
+        android:id="@+id/filtarFragment"
+        android:name="com.guido.mascotas_2.fragments.filtarFragment"
+        android:label="fragment_filtar"
+        tools:layout="@layout/fragment_filtar" >
         <action
-            />
-        <action
-            android:id="@+id/action_tipos_razas_to_home"
-            app:destination="@id/mascotas" />
+            android:id="@+id/action_filtarFragment_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
     </fragment>
-
 </navigation>
