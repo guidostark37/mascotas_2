@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow"
+    android:foregroundGravity="left|bottom"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="407dp"
+        android:layout_height="246dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/nuevas" />
+
+    <LinearLayout
+        android:id="@+id/forma"
+        android:layout_width="350dp"
+        android:layout_height="270dp"
+        android:background="@drawable/corners"
+        android:translationX="35dp">
+
+        <ImageView
+            android:id="@+id/fondo"
+            android:layout_width="266dp"
+            android:layout_height="182dp"
+            android:layout_gravity="center"
+            android:translationX="35dp"
+            app:srcCompat="@drawable/vacunacion" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="407dp"
+        android:layout_height="279dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/nuevas" />
+
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/home"
+    android:id="@+id/nav">
+    <fragment android:id="@+id/home"
+        android:name="com.guido.mascotas_2.fragments.inicio"
+        tools:layout="@layout/fragment_inicio">
+        <action
+            android:id="@+id/action_home_to_registrar"
+            app:destination="@id/registrar" />
+    </fragment>
+
+
+    <fragment android:id="@+id/registrar"
+        android:name="com.guido.mascotas_2.fragments.registrar"
+        tools:layout="@layout/fragment_registrar">
+        <action
+            android:id="@+id/action_registrar_to_mascotas"
+            app:destination="@id/tipos_razas" />
+    </fragment>
+
+    <fragment android:id="@+id/mascotas"
+        android:name="com.guido.mascotas_2.fragments.mascotas"
+        tools:layout="@layout/fragment_mascotas">
+        <action
+            android:id="@+id/action_mascotas_to_home"
+            app:destination="@id/buscar" />
+    </fragment>
+<fragment android:id="@+id/buscar"
+    android:name="com.guido.mascotas_2.fragments.filtar"
+    tools:layout="@layout/fragment_filtar">
+    <action
+        android:id="@+id/action_buscar_to_mascotas"
+        app:destination="@id/home" />
+</fragment>
+    <fragment android:id="@+id/tipos_razas"
+        android:name="com.guido.mascotas_2.fragments.tipos_razas"
+        tools:layout="@layout/fragment_tipos_razas">
+        <action
+            />
+        <action
+            android:id="@+id/action_tipos_razas_to_home"
+            app:destination="@id/mascotas" />
+    </fragment>
+
+</navigation>
